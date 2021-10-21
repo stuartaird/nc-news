@@ -1,0 +1,22 @@
+.App {
+  background-color: darkgray;
+}
+
+.banner-outer {
+  background-color: rgb(78, 76, 218);
+  height: 2.5em;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.banner-inner {
+  background-color: rgb(53, 41, 216);
+  padding: 10px 5px;
+}
+
+.banner-user {
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: right;
+}
