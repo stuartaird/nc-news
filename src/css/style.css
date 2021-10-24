@@ -31,12 +31,14 @@
 .flex-child {
   width: 100%;
   margin: 5px;
+  padding: 5px;
 }
 
 .flex-articles {
   background-color: #f8f8ff;
   width: 100%;
   text-align: left;
+  margin: 5px;
 }
 
 .article-title {

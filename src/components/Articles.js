@@ -28,17 +28,15 @@ const Articles = () => {
       {articles.map((article) => {
         return (
           <section id={article.id} key={article.id} className="flex-child flex-articles">
+            <br />
             <a href="ARTICLE_LINK" className="article-title">
               {article.title}
             </a>
-
+            <p className="article-excerpt">{article.body.slice(0, 120)}...</p>
             <p className="article-info">
-              Author: {article.author} <br />
               Created: {article.created_at} <br />
-              Votes: {article.votes} <br />
               Comments: {article.totalcomments}
             </p>
-            <p className="article-excerpt">{article.body.slice(0, 120)}...</p>
           </section>
         );
       })}
