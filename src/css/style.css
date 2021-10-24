@@ -1,5 +1,5 @@
 .App {
-  background-color: darkgray;
+  background-color: #8c92ac;
 }
 
 .banner-outer {
@@ -19,4 +19,36 @@
   font-weight: normal;
   font-size: 1rem;
   text-align: right;
+}
+
+.flex-parent {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-child {
+  width: 100%;
+  margin: 5px;
+}
+
+.flex-articles {
+  background-color: #f8f8ff;
+  width: 100%;
+  text-align: left;
+}
+
+.article-title {
+  text-align: center;
+  font-weight: bold;
+}
+.article-info {
+  text-align: right;
+  font-size: 9pt;
+}
+
+.article-excerpt {
+  font-style: italic;
+  font-size: 10pt;
 }

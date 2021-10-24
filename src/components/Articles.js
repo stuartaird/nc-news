@@ -1,11 +1,47 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
+import "../css/style.css";
 
 const Articles = () => {
+  const [articles, setArticles] = useState([]);
+  let queryString = "https://sa-nc-news.herokuapp.com/api/articles";
+
+  useEffect(() => {
+    fetch(queryString)
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        setArticles(response.articles);
+      });
+  }, [queryString]);
+
+  // console.log(articles);
+
   return (
-    <div classname="articles">
-      <section id="topics">topics filter</section>
-      <section id="sort_options">sort options</section>
-      <section id="articles>">article list</section>
+    <div className="flex-parent articles">
+      <section id="topics" className="flex-child articles_topics">
+        <p> topics filter</p>
+      </section>
+      <section id="sort_options" className="flex-child articles_sort">
+        <p>sort options</p>
+      </section>
+      {articles.map((article) => {
+        return (
+          <section id={article.id} key={article.id} className="flex-child flex-articles">
+            <a href="ARTICLE_LINK" className="article-title">
+              {article.title}
+            </a>
+
+            <p className="article-info">
+              Author: {article.author} <br />
+              Created: {article.created_at} <br />
+              Votes: {article.votes} <br />
+              Comments: {article.totalcomments}
+            </p>
+            <p className="article-excerpt">{article.body.slice(0, 120)}...</p>
+          </section>
+        );
+      })}
     </div>
   );
 };

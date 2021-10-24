@@ -3,9 +3,9 @@ import "../css/style.css";
 
 const Header = ({ user }) => {
   return (
-    <div class="banner-outer">
-      <section class="banner-user">Logged in as: {user}</section>
-      <section class="banner-inner">NC News</section>
+    <div className="banner-outer">
+      <section className="banner-user">Logged in as: {user}</section>
+      <section className="banner-inner">NC News</section>
     </div>
   );
 };
