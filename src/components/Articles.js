@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../css/style.css";
 
 const Articles = () => {
@@ -29,9 +30,9 @@ const Articles = () => {
         return (
           <section id={article.id} key={article.id} className="flex-child flex-articles">
             <br />
-            <a href="ARTICLE_LINK" className="article-title">
+            <Link to={`/articles/${article.article_id}`} className="article-title">
               {article.title}
-            </a>
+            </Link>
             <p className="article-excerpt">{article.body.slice(0, 120)}...</p>
             <p className="article-info">
               Created: {article.created_at} <br />

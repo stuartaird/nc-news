@@ -1,3 +1,4 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./css/style.css";
 import Header from "./components/Header.js";
 import Articles from "./components/Articles.js";
@@ -7,10 +8,12 @@ function App() {
   const [user, setUser] = useState("stuart");
 
   return (
-    <div className="App">
-      <Header user={user} />
-      <Articles />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header user={user} />
+        <Articles />
+      </div>
+    </BrowserRouter>
   );
 }
 
