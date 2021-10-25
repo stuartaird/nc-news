@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./css/style.css";
 import Header from "./components/Header.js";
 import Articles from "./components/Articles.js";
+import Article from "./components/Article.js";
 import { useState } from "react";
 
 function App() {
@@ -11,7 +12,14 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header user={user} />
-        <Articles />
+        <Switch>
+          <Route path="/Articles/:article_id">
+            <Article />
+          </Route>
+          <Route path="/">
+            <Articles />
+          </Route>
+        </Switch>
       </div>
     </BrowserRouter>
   );
