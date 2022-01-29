@@ -1,22 +1,17 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getArticle } from "../utils/api.js";
 
 const Article = () => {
   const { article_id } = useParams();
   const [article, setArticle] = useState([]);
-  let queryString = `https://sa-nc-news.herokuapp.com/api/articles/${article_id}`;
 
   useEffect(() => {
-    fetch(queryString)
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        setArticle(response.article);
-      });
-  }, [queryString]);
+    getArticle(article_id).then((response) => {
+      setArticle(response);
+    });
+  }, [article_id]);
 
-  console.log(article);
   return (
     <div>
       <block>{article.body}</block>
