@@ -1,22 +1,16 @@
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/style.css";
+import { getArticles } from "../utils/api.js";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  let queryString = "https://sa-nc-news.herokuapp.com/api/articles";
 
   useEffect(() => {
-    fetch(queryString)
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        setArticles(response.articles);
-      });
-  }, [queryString]);
-
-  // console.log(articles);
+    getArticles().then((response) => {
+      setArticles(response.articles);
+    });
+  }, []);
 
   return (
     <div className="flex-parent articles">
@@ -28,14 +22,21 @@ const Articles = () => {
       </section>
       {articles.map((article) => {
         return (
-          <section id={article.id} key={article.id} className="flex-child flex-articles">
+          <section
+            id={article.id}
+            key={article.id}
+            className="flex-child flex-articles"
+          >
             <br />
-            <Link to={`/articles/${article.article_id}`} className="article-title">
+            <Link
+              to={`/articles/${article.article_id}`}
+              className="article-title"
+            >
               {article.title}
             </Link>
             <p className="article-excerpt">{article.body.slice(0, 120)}...</p>
             <p className="article-info">
-              Created: {article.created_at} <br />
+              Created: {article.created_at.slice(0, 10)} <br />
               Comments: {article.totalcomments}
             </p>
           </section>
