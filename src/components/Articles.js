@@ -30,12 +30,12 @@ const Articles = () => {
             <br />
             <Link
               to={`/articles/${article.article_id}`}
-              className="article-title"
+              className="articles-title"
             >
               {article.title}
             </Link>
-            <p className="article-excerpt">{article.body.slice(0, 120)}...</p>
-            <p className="article-info">
+            <p className="articles-excerpt">{article.body.slice(0, 120)}...</p>
+            <p className="articles-info">
               Created: {article.created_at.slice(0, 10)} <br />
               Comments: {article.totalcomments}
             </p>
