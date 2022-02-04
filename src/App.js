@@ -6,7 +6,7 @@ import Article from "./components/Article.js";
 import { useState } from "react";
 
 function App() {
-  const [user, setUser] = useState("Stuart");
+  const [user] = useState("Stuart");
 
   return (
     <BrowserRouter>
