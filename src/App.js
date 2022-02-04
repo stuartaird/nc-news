@@ -6,14 +6,10 @@ import Article from "./components/Article.js";
 import { useState } from "react";
 
 function App() {
-  const [user, setUser] = useState("stuart");
+  const [user, setUser] = useState("Stuart");
 
   return (
     <BrowserRouter>
-      <meta
-        name="viewport"
-        content="width=device-width initial-scale=1.0"
-      ></meta>
       <div className="App">
         <Header user={user} />
         <Switch>
