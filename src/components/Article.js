@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticle, getComments } from "../utils/api.js";
+import { getArticle, getComments, changeVotes } from "../utils/api.js";
 import "../css/style.css";
 
 const Article = () => {
@@ -12,7 +12,7 @@ const Article = () => {
     getArticle(article_id).then((response) => {
       setArticle(response);
     });
-  }, [article_id]);
+  }, [article_id, article]);
 
   useEffect(() => {
     getComments(article_id).then((response) => {
@@ -33,8 +33,9 @@ const Article = () => {
         {article.body}
       </div>
       <div className="voting-buttons" key="voting">
-        <button>Upvote</button>
-        <button>Downvote</button>
+        <button onClick={(e) => changeVotes(article_id, 1)}>Upvote</button>
+        <p>{article.votes}</p>
+        <button onClick={(e) => changeVotes(article_id, -1)}>Downvote</button>
       </div>
       <div className="comments-array" key="comments-array">
         {comments.map((c) => {

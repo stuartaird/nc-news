@@ -21,3 +21,7 @@ export const getComments = (article_id) => {
     return data.comments;
   });
 };
+
+export const changeVotes = (article_id, votes) => {
+  return newsApi.patch(`/articles/${article_id}`, { inc_votes: votes });
+};
