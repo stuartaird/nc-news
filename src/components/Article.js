@@ -28,7 +28,7 @@ const Article = () => {
       </div>
       <div className="article-author" key="author-details">
         <p>Author: {article.author}</p>
-        <p>Published: {article.created_at}</p>
+        <p>Published: {article.created_at.slice(0, 10)}</p>
       </div>
       <div className="article-body first-color" key="body">
         {article.body}
