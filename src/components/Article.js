@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticle, getComments, changeVotes } from "../utils/api.js";
-import "../css/style.css";
+import "../css/index.css";
 
 const Article = () => {
   const { article_id } = useParams();

@@ -1,5 +1,4 @@
-// import { useEffect, useState } from "react";
-import "../css/style.css";
+import "../css/index.css";
 
 const Header = ({ user }) => {
   return (

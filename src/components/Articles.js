@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../css/style.css";
+import "../css/articles.css";
+import "../css/index.css";
 import { getArticles } from "../utils/api.js";
 
 const Articles = () => {
