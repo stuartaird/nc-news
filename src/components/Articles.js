@@ -26,7 +26,7 @@ const Articles = () => {
           <section
             id={article.id}
             key={article.id}
-            className="flex-child flex-articles"
+            className="flex-child flex-articles first-color"
           >
             <br />
             <Link

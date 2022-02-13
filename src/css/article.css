@@ -16,7 +16,6 @@
   font-size: 1.2em;
   border: solid;
   padding: 20px;
-  background-color: white;
 }
 
 .voting-buttons {
@@ -37,7 +36,6 @@
 .comment-card {
   border: solid;
   border-radius: 8px;
-  background-color: white;
   margin: 10px 5vw;
   padding: 10px 30px;
 }

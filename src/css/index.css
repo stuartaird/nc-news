@@ -13,5 +13,40 @@ code {
 }
 
 .App {
-  background-color: #8c92ac;
+  background-color: #a0a1b6;
+}
+
+/* color palette */
+.first-color {
+  background: #ececec;
+}
+
+.second-color {
+  background: #cae6df;
+}
+
+.third-color {
+  background: #385170;
+}
+
+.fourth-color {
+  background: #142d4c;
+}
+
+.banner-outer {
+  height: 2.5em;
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.banner-inner {
+  padding: 10px 5px;
+  color: white;
+}
+
+.banner-user {
+  font-weight: normal;
+  font-size: 0.4em;
+  text-align: right;
 }

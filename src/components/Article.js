@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticle, getComments, changeVotes } from "../utils/api.js";
 import "../css/index.css";
+import "../css/article.css";
 
 const Article = () => {
   const { article_id } = useParams();
@@ -29,7 +30,7 @@ const Article = () => {
         <p>Author: {article.author}</p>
         <p>Published: {article.created_at}</p>
       </div>
-      <div className="article-body" key="body">
+      <div className="article-body first-color" key="body">
         {article.body}
       </div>
       <div className="voting-buttons" key="voting">
@@ -40,7 +41,7 @@ const Article = () => {
       <div className="comments-array" key="comments-array">
         {comments.map((c) => {
           return (
-            <div className="comment-card" key={`${c.comment_id}`}>
+            <div className="comment-card second-color" key={`${c.comment_id}`}>
               <p>
                 <b>User: </b>
                 {c.author}
