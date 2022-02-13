@@ -4,9 +4,11 @@ import Header from "./components/Header.js";
 import Articles from "./components/Articles.js";
 import Article from "./components/Article.js";
 import { useState } from "react";
+import { useDocTitle } from "./utils/docTitle.js";
 
 function App() {
   const [user] = useState("Stuart");
+  const [doctitle, setDocTitle] = useDocTitle("NC News");
 
   return (
     <BrowserRouter>

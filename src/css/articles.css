@@ -25,7 +25,7 @@
   text-transform: capitalize;
 }
 .articles-info {
-  text-align: right;
+  text-align: end;
   font-size: 0.8em;
 }
 
@@ -45,6 +45,6 @@
 @media all and (min-width: 1650px) {
   .flex-articles {
     max-width: 800px;
-    height: 220px;
+    max-height: 150px;
   }
 }

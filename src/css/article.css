@@ -39,3 +39,24 @@
   margin: 10px 5vw;
   padding: 10px 30px;
 }
+
+@media all and (min-width: 800px) {
+  .article-body {
+    max-width: 75%;
+    height: 220px;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .comment-card {
+    max-width: 60%;
+    margin: 10px auto;
+  }
+}
+
+@media all and (min-width: 1650px) {
+  .flex-articles {
+    max-width: 800px;
+    height: 220px;
+  }
+}

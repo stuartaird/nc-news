@@ -6,7 +6,12 @@ const Header = ({ user }) => {
       <section className="banner-user third-color">
         Logged in as: {user}
       </section>
-      <section className="banner-inner third-color">NC News</section>
+      <section className="banner-inner third-color">
+        NC News
+        <section className="banner-motto">
+          "Weird news for weird people."
+        </section>
+      </section>
     </div>
   );
 };
