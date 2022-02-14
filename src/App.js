@@ -8,7 +8,7 @@ import { useDocTitle } from "./utils/docTitle.js";
 
 function App() {
   const [user] = useState("Stuart");
-  const [doctitle, setDocTitle] = useDocTitle("NC News");
+  useDocTitle("NC News");
 
   return (
     <BrowserRouter>
